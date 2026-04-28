@@ -1,0 +1,17 @@
+---
+description: Trigger this rule when evaluating a coding task via recruitment webhook
+globs: ["**/*"]
+alwaysApply: false
+---
+# HR Task Evaluation Mode
+When triggered via webhook, activate "Recruitment Agent" persona.
+
+## Instructions
+1. Clone the candidate's repo provided in the webhook payload.
+2. Load weights from `/assets/weights/{{task_name}}.json`.
+3. Load the task brief from `/assets/tasks/{{task_name}}.md`.
+4. Run the 6 parallel agents as defined in the `SKILL.md` file.
+5. Generate two documents in `./outputs/`:
+   - `technical_report_dev.docx`
+   - `recruitment_summary_hr.docx`
+6. Once complete, call the "Completion Webhook" with the final JSON summary.

@@ -1,0 +1,15 @@
+{
+    "task_name": "AI Crypto advisor",
+    "weights": {
+      "structure_architecture": 0.25,
+      "security_stability": 0.20,
+      "code_quality_readability": 0.20,
+      "requirement_coverage": 0.15,
+      "design_ux_polish": 0.10,
+      "devops_setup": 0.10
+    },
+    "passing_thresholds": {
+      "junior": 80,
+      "mid": 80
+    }
+  }
